@@ -1,7 +1,3 @@
---!nocheck
---!optimize 2
---!native
-
 local FREE_THREADS = {}
 
 local function runCallback(callback, thread, ...)

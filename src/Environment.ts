@@ -75,6 +75,8 @@ export class Environment {
 		const promise = LoadVirtualModule(dependency, this).tap((result) => {
 			this._RegistryDependency(dependency, result);
 		});
+		this._DependencyLoaders.set(dependency, promise);
+
 		return promise as Promise<T>;
 	}
 
